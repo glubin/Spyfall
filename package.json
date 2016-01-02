@@ -1,14 +1,14 @@
 {
-  "name": "module6",
+  "name": "spyfall",
   "version": "1.0.0",
-  "description": "chat room for 330",
+  "description": "fan site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/glubin/fall2015-module6-greg-lubin-424128-dan-mazour-431275/"
+    "url": "-"
   },
   "author": "dan and greg",
   "license": "ISC",
