@@ -1,0 +1,19 @@
+{
+  "name": "module6",
+  "version": "1.0.0",
+  "description": "chat room for 330",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/glubin/fall2015-module6-greg-lubin-424128-dan-mazour-431275/"
+  },
+  "author": "dan and greg",
+  "license": "ISC",
+  "dependencies": {
+    "mime": "^1.3.4",
+    "socket.io": "^1.3.7"
+  }
+}

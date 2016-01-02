@@ -1,0 +1,9 @@
+Gregory Lubin - 424128
+Daniel Mazour - 431275
+Link to EC2: http://ec2-52-22-103-67.compute-1.amazonaws.com:1337/client.html
+
+Creative Portion:
+For our Creative Portion:
+1) we used bootstrap to make the site look nice
+2) we used socket connection/disconnection in order to update the current room information when a user leaves the page, not just when the users goes back to the lobby
+3) we added a snapshot of user infromation related to how many messages they sent (including general lobby messages, room messages, and private messages), as well as private messages they've received.
