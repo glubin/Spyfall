@@ -10,7 +10,7 @@
     "type": "git",
     "url": "-"
   },
-  "author": "dan and greg",
+  "author": "greg",
   "license": "ISC",
   "dependencies": {
     "mime": "^1.3.4",
