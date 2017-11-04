@@ -69,6 +69,27 @@ document.getElementById("startNewGame").addEventListener("click", function(event
 			document.getElementById("listHeader").style.visibility = "visible";
 			document.getElementById("gameDisplay").style.display = "block";
 			show === 1;
+				document.getElementById('timer').innerHTML = 06 + ":" + 00;
+		startTimer();
+
+		function startTimer() {
+			var presentTime = document.getElementById('timer').innerHTML;
+			var timeArray = presentTime.split(/[:]+/);
+			var m = timeArray[0];
+			var s = checkSecond((timeArray[1] - 1));
+			if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+
+document.getElementById('timer').innerHTML =
+m + ":" + s;
+setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}	
 		});
 
 document.getElementById("showHide").addEventListener("click", function(event){
@@ -110,8 +131,12 @@ document.getElementById("showHide").addEventListener("click", function(event){
 
 </head>
 <body>
-	<div class="container spyfallGame">
-		<h1 ><div style="text-align:center;"><i>Spyfall</i></div></h1>
+
+	<div>Time left = <span id="timer"></span>
+
+
+		<div class="container spyfallGame">
+			<h1 ><div style="text-align:center;"><i>Spyfall</i></div></h1>
 		<!-- <div class="row">
 			<h2 class="col-xs-12"><div class="col-xs-offset-4"><i>Spyfall</i></div></h2>
 		</div> -->
