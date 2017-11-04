@@ -10,7 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type ="text/javascript">
 
-	var socket = io.connect('http://ec2-52-22-103-67.compute-1.amazonaws.com:1337/client.html');
+	//var socket = io.connect('http://ec2-52-22-103-67.compute-1.amazonaws.com:1337/client.html');
+	var socket = io.connect('http://localhost:1337');
 
 
 	var uniqueID = "";
@@ -26,7 +27,7 @@
 			console.log("you are the spy!");
 			document.getElementById("spyInfo").style.visibility = "visible";
 			document.getElementById("spyInfo").innerHTML = "<h3>You are the <b>spy</b></h3>";
-			document.getElementById("possibleList").style.visibility = "visible";
+			// document.getElementById("possibleList").style.visibility = "visible";
 			document.getElementById("listHeader").style.visibility = "visible";
 			document.getElementById("gameDisplay").style.display = "block";
 
@@ -38,7 +39,7 @@
 			document.getElementById("gameInfo").style.visibility = "visible";
 			document.getElementById("location").innerHTML = "<i>Location</i>: " + data['location'];
 			document.getElementById("role").innerHTML = "<i>Role</i>: " + data['role'];
-			document.getElementById("possibleList").style.visibility = "visible";
+			// document.getElementById("possibleList").style.visibility = "visible";
 			document.getElementById("listHeader").style.visibility = "visible";
 			document.getElementById("gameDisplay").style.display = "block";
 
@@ -50,38 +51,39 @@
 			console.log("okay your uniqueID has been set to " + uniqueID);
 		});
 
-		socketio.on("give_location_list", function(data){
-			console.log("update location list!");
-			locationList = data['locationList'];
-			for (var i=0; i < locationList.length; i++) {
-				document.getElementById("possibleList").innerHTML = document.getElementById("possibleList").innerHTML + "<div class='location'>" + locationList[i] + "</div>" + "</br>";
-			};
+		// socketio.on("give_location_list", function(data){
+		// 	document.getElementById("possibleList").innerHTML = "";
+		// 	console.log("update location list!");
+		// 	locationList = data['locationList'];
+		// 	for (var i=0; i < locationList.length; i++) {
+		// 		document.getElementById("possibleList").innerHTML = document.getElementById("possibleList").innerHTML + "<div class='location'>" + locationList[i] + "</div>" + "</br>";
+		// 	};
 
-		});
+		// });
 
-		document.getElementById("startNewGame").addEventListener("click", function(event){
-			socketio.emit("start_new_game", {});
-			document.getElementById("spyInfo").style.visibility = "hidden";
-			document.getElementById("gameInfo").style.visibility = "hidden";
-			document.getElementById("possibleList").style.visibility = "visible";
+document.getElementById("startNewGame").addEventListener("click", function(event){
+	socketio.emit("start_new_game", {});
+	document.getElementById("spyInfo").style.visibility = "hidden";
+	document.getElementById("gameInfo").style.visibility = "hidden";
+			// document.getElementById("possibleList").style.visibility = "visible";
 			document.getElementById("listHeader").style.visibility = "visible";
 			document.getElementById("gameDisplay").style.display = "block";
 			show === 1;
 		});
 
-		document.getElementById("showHide").addEventListener("click", function(event){
-			if (show === 1){
-				console.log("need to hide");
-				show = 0;
-				document.getElementById("gameDisplay").style.display = "none";
-			} else {
-				console.log("need to show");
-				show = 1;
-				document.getElementById("gameDisplay").style.display = "block";
-			}
-		});
+document.getElementById("showHide").addEventListener("click", function(event){
+	if (show === 1){
+		console.log("need to hide");
+		show = 0;
+		document.getElementById("gameDisplay").style.display = "none";
+	} else {
+		console.log("need to show");
+		show = 1;
+		document.getElementById("gameDisplay").style.display = "block";
+	}
+});
 
-	});
+});
 
 
 </script>
@@ -108,15 +110,16 @@
 
 </head>
 <body>
-	<div class="container spyfallGame" style="margin-left: 10px !important;">
-		<div class="row">
+	<div class="container spyfallGame">
+		<h1 ><div style="text-align:center;"><i>Spyfall</i></div></h1>
+		<!-- <div class="row">
 			<h2 class="col-xs-12"><div class="col-xs-offset-4"><i>Spyfall</i></div></h2>
-		</div>
+		</div> -->
 
 		<hr>
 
-		<div class="row">
-			<button id="showHide" class="col-xs col-xs-offset-4">Show/Hide</button>
+		<div class="row" style="text-align:center">
+			<button class="button" id="showHide" style="font-size:150%">Show/Hide</button>
 			<div id="gameDisplay">
 				<div class="col-xs">
 					<div id="spyInfo">
@@ -130,25 +133,98 @@
 			</div>
 		</div>
 
-		<hr>
-
-		<div class="row">
-			<div class="col-xs" style="margin-top: 10px;">
-				<button type="button" id="startNewGame" class="btn-info btn col-xs-offset-3">Start New Game</button>
-			</div>
-		</div>
 
 		<hr>
 
-		<div class="row">
+
+<!-- 		<div class="row">
 			<h4 class="col-xs">
 				<div id="listHeader" style="margin-bottom: 10px;"><u><i>Locations:</i></u></u></div>
 				<div id="possibleList"></div>
 			</h4>
 		</div>
-		
+	-->
 
-	</div>
+	
 
+	<div id="listHeader" style="margin-bottom: 10px;"><u><i></i></u></u></div>
+	<div class="container" 
+	style="text-align: center;
+	border-radius: 5px;
+	margin: 0px auto;
+	float: none;"
+
+	>
+	<table class="table table-striped table-bordered">
+		<tbody>
+			<tr>
+				<td>Airplane</td>
+				<td>Bank</td>
+				<td>Beach</td>
+			</tr>
+			<tr>
+				<td>Cathedral</td>
+				<td>Animal Shelter</td>
+
+				<td>Greg's House</td>
+			</tr>
+			<tr>
+				<td>Circus</td>
+				<td>Corporate Party</td>
+				<td>Crusader Army</td>
+			</tr>
+			<tr>
+				<td>Casino</td>
+				<td>Day Spa</td>
+				<td>Embassy</td>
+			</tr>
+			<tr>
+				<td>Hospital</td>
+				<td>CIA Secret Base</td>
+				<td>Hotel</td>
+			</tr>
+			<tr>
+				<td>Movie Studio</td>
+				<td>Ocean Liner</td>
+				<td>Passenger Train</td>
+			</tr>
+			<tr>
+				<td>Pirate Ship</td>
+				<td>Polar Station</td>
+				<td>Police Station</td>
+			</tr>
+			<tr>
+				<td>Restaurant</td>
+				<td>High School</td>
+				<td>Service Station</td>
+			</tr>
+			<tr>
+				<td>Space Station</td>
+				<td>Submarine</td>
+				<td>Supermarket</td>
+			</tr>
+			<tr>
+				<td>Theater</td>
+				<td>University</td>
+				<td>WWII Squad</td>
+			</tr>
+			<tr>
+				<td>Zoo</td>
+				<td>Salem Witch Trial</td>
+				<td>Jail</td>
+			</tr>
+
+
+		</tbody>		
+	</table>
+</div>
+
+
+<hr>
+
+<div class="row" style="text-align:center">
+	<button type="button" id="startNewGame" class="btn-info btn" style="font-size:150%">Start New Game</button>
+</div>
+<br><br><br>
 </body>
 </html>

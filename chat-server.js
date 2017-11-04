@@ -53,8 +53,8 @@ var loc28 = {location:"Theater", roles:["Coat Checker","Actor","Actress", "Crew 
 var loc29 = {location:"University", roles:["Graduate Student","Professor","Dean", "Undergraduate Student", "Book Store Manager", "Janitor", "Professor", "Student"]};
 var loc30 = {location:"WWII Squad", roles:["Resistance Fighter","Radioman","Scout", "Prisoner", "Soldier", "Medic", "Scout", "Soldier"]};
 var loc31 = {location:"Zoo", roles:["Dophin Trainer","Zoo Owner","Visitor", "Veterinarian", "Animal Curator", "Researcher", "Visitor", "Veterinarian"]};
-var loc32 = {location:"Gryffindor Common Room", roles:["Hermoine","Ron","Harry Potter", "Dean Thomas", "Neville", "McGonagall", "James Potter", "Albus Dumbledore"]};
-var loc33 = {location:"Super Smash Brothers Course", roles:["Kirby","Samus","Pikachu", "Mario", "Link", "Ness", "Luigi", "Yoshi"]};
+// var loc32 = {location:"Gryffindor Common Room", roles:["Hermoine","Ron","Harry Potter", "Dean Thomas", "Neville", "McGonagall", "James Potter", "Albus Dumbledore"]};
+// var loc33 = {location:"Super Smash Brothers Course", roles:["Kirby","Samus","Pikachu", "Mario", "Link", "Ness", "Luigi", "Yoshi"]};
 var loc34 = {location:"Jail", roles:["White-Collar Criminal","Security Guard","Thief", "Arsonist", "Gang Affiliate", "Wardon", "Arsonist","Security Guard"]};
 var loc35 = {location:"Salem Witch Trial", roles:["Accused Witch","Judge","Town Mayor", "Actual Witch", "Executioner", "Person In The Angry Mob", "Person In The Angry Mob","Person In The Angry Mob"]};
 
@@ -91,8 +91,8 @@ locations.push(loc28);
 locations.push(loc29);
 locations.push(loc30);
 locations.push(loc31);
-locations.push(loc32);
-locations.push(loc33);
+// locations.push(loc32);
+// locations.push(loc33);
 locations.push(loc34);
 locations.push(loc35);
 
@@ -113,7 +113,9 @@ io.sockets.on("connection", function(socket){
 	var locationList = [];
 	for (var x=0; x<locations.length; x++){
 		locationList.push(locations[x].location);
+
 	}
+	console.log(locationList);
 	io.to(uniqueID).emit("give_location_list", {locationList:locationList});
 
 	socket.on('create_user', function(data){
