@@ -26,8 +26,8 @@ var loc1 = {location:"Airplane", roles:["1st Class Passenger","Air Marshall","At
 var loc2 = {location:"Bank", roles:["Teller","Rich Client","Poor Client", "Bank Manager", "Security Guard", "Teller","Assistant Manager"]};
 var loc3 = {location:"Beach", roles:["Dad on Vacation","Child on Vacation","Lifeguard", "Kite Surfer", "Lifeguard", "Metal Detector Guy", "Mom on Vacation", "Surfer"]};
 var loc4 = {location:"Cathedral", roles:["Priest","Sinner","Big Donor", "Chorister", "Organist", "Nun", "Nun", "Priest"]};
-var loc5 = {location:"Our Office", roles:["Greg","Jeremy","Jess", "Adi", "Michelle", "Laura","Andrea","Hannes"]};
-var loc6 = {location:"Greg's House", roles:["Mike","Greg","Devin", "Scott", "Jordan", "Pierce", "Wendy", "Gary"]};
+//var loc5 = {location:"Our Office", roles:["Greg","Jeremy","Jess", "Adi", "Michelle", "Laura","Andrea","Hannes"]};
+//var loc6 = {location:"Greg's House", roles:["Mike","Greg","Devin", "Scott", "Jordan", "Pierce", "Wendy", "Gary"]};
 var loc7 = {location:"Circus", roles:["Acrobat","Lion Tamer","Fire Eater", "Fire Walker", "Clown", "Juggler", "Ringmaster", "Clown"]};
 var loc8 = {location:"Corporate Party", roles:["Assistant Manager","CEO","Janitor", "Secretary", "Accountant", "Guest of Employee", "Bartender", "Sales Person"]};
 var loc9 = {location:"Crusader Army", roles:["Bishop","Squire","Archer", "Knight", "Prisoner", "Servant", "Archer", "Knight"]};
@@ -53,10 +53,11 @@ var loc28 = {location:"Theater", roles:["Coat Checker","Actor","Actress", "Crew 
 var loc29 = {location:"University", roles:["Graduate Student","Professor","Dean", "Undergraduate Student", "Book Store Manager", "Janitor", "Professor", "Student"]};
 var loc30 = {location:"WWII Squad", roles:["Resistance Fighter","Radioman","Scout", "Prisoner", "Soldier", "Medic", "Scout", "Soldier"]};
 var loc31 = {location:"Zoo", roles:["Dophin Trainer","Zoo Owner","Visitor", "Veterinarian", "Animal Curator", "Researcher", "Visitor", "Veterinarian"]};
-// var loc32 = {location:"Gryffindor Common Room", roles:["Hermoine","Ron","Harry Potter", "Dean Thomas", "Neville", "McGonagall", "James Potter", "Albus Dumbledore"]};
+var loc32 = {location:"Gryffindor Common Room", roles:["Hermoine","Ron","Harry Potter", "Dean Thomas", "Neville", "McGonagall", "James Potter", "Albus Dumbledore"]};
 // var loc33 = {location:"Super Smash Brothers Course", roles:["Kirby","Samus","Pikachu", "Mario", "Link", "Ness", "Luigi", "Yoshi"]};
 var loc34 = {location:"Jail", roles:["White-Collar Criminal","Security Guard","Thief", "Arsonist", "Gang Affiliate", "Wardon", "Arsonist","Security Guard"]};
 var loc35 = {location:"Salem Witch Trial", roles:["Accused Witch","Judge","Town Mayor", "Actual Witch", "Executioner", "Person In The Angry Mob", "Person In The Angry Mob","Person In The Angry Mob"]};
+var loc36 = {location:"Busy Street", roles:["Pedestrian","Panhandler","Angry Driver", "Police Officer", "Lost Kitten", "Pedestrian", "Chef on Break","Pedestrian"]};
 
 
 
@@ -64,8 +65,8 @@ locations.push(loc1);
 locations.push(loc2);
 locations.push(loc3);
 locations.push(loc4);
-locations.push(loc5);
-locations.push(loc6);
+//locations.push(loc5);
+//locations.push(loc6);
 locations.push(loc7);
 locations.push(loc8);
 locations.push(loc9);
@@ -91,10 +92,11 @@ locations.push(loc28);
 locations.push(loc29);
 locations.push(loc30);
 locations.push(loc31);
-// locations.push(loc32);
+locations.push(loc32);
 // locations.push(loc33);
 locations.push(loc34);
 locations.push(loc35);
+locations.push(loc36);
 
 
 
