@@ -21,7 +21,7 @@ app.listen(1337);
 var uniqueIDList = [];
 var locations = [];
 
-
+/*
 var loc1 = {location:"Airplane", roles:["1st Class Passenger","Air Marshall","Attendant","Pilot","Co-Pilot","Stewardess","Flight Attendant", "Economy Passenger"]};
 var loc2 = {location:"Bank", roles:["Teller","Rich Client","Poor Client", "Bank Manager", "Security Guard", "Teller","Assistant Manager"]};
 var loc3 = {location:"Beach", roles:["Dad on Vacation","Child on Vacation","Lifeguard", "Kite Surfer", "Lifeguard", "Metal Detector Guy", "Mom on Vacation", "Surfer"]};
@@ -92,7 +92,7 @@ locations.push(loc31);
 locations.push(loc32);
 locations.push(loc33);
 
-
+*/
 
 
 // Do the Socket.IO magic:
