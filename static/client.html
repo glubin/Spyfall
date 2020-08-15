@@ -47,7 +47,7 @@
 		});
 
 		socketio.on("give_user_socket_ID", function(data){
-			console.log("client side: " + data.uniqueID);
+			console.log("Client Side: " + data.uniqueID);
 			uniqueID = data.uniqueID;
 			console.log("okay your uniqueID has been set to " + uniqueID);
 		});
