@@ -21,7 +21,7 @@
 
 	document.addEventListener("DOMContentLoaded", function(event) {
 
-		var socketio = io.connect();
+		var socketio = io.connect("http://ec2-52-22-103-67.compute-1.amazonaws.com:1337/");
 
 		socketio.on("notify_spy", function(data){
 			document.getElementById("gameInfo").style.visibility = "hidden";
