@@ -72,17 +72,17 @@ document.getElementById("startNewGame").addEventListener("click", function(event
 				document.getElementById('timer').innerHTML = 06 + ":" + 00;
 		
 		//UNCOMMENT BELOW AND YOU WILL RE-ENABLE THE TIMER 1/X
-		//startTimer();
+		startTimer();
 
 		//UNCOMMENT BELOW AND YOU WILL RE-ENABLE THE TIMER 2/X
-		/*
+		
 		function startTimer() {
 			var presentTime = document.getElementById('timer').innerHTML;
 			var timeArray = presentTime.split(/[:]+/);
 			var m = timeArray[0];
 			var s = checkSecond((timeArray[1] - 1));
 			if(s==59){m=m-1}
-		*/
+		
   //if(m<0){alert('timer completed')}
 
 document.getElementById('timer').innerHTML =
