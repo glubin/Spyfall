@@ -1,6 +1,6 @@
 // Require the packages we will use:
 var http = require("http"),
-socketio = require("socket.io"),
+socketio = require("socket.io")(1337),
 fs = require("fs");
 
 // Listen for HTTP connections.  This is essentially a miniature static file server that only serves our one file, client.html:
