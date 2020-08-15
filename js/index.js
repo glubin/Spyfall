@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		userObjects.push(userInfo);
 
 		console.log(userObjects);
+		console.log("test");
 	});
 
 
