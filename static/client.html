@@ -13,6 +13,16 @@
 	// var socket = io.connect('http://ec2-52-5-153-154.compute-1.amazonaws.com:1337/client.html');
 	 var socket = io.connect('http://ec2-52-22-103-67.compute-1.amazonaws.com:1337/client.html');
 	// var socket = io.connect('http://localhost:1337');
+		
+	//testing online solutions
+	var app = express();
+	var path = require('path');
+
+	// viewed at http://localhost:8080
+	app.get('/', function(req, res) {
+	    res.sendFile(path.join(__dirname + '/static/index.html'));
+	});
+	// end testing online
 
 
 	var uniqueID = "";
